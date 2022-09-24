@@ -3239,7 +3239,7 @@
     (effects (font (size 2 2)) (justify left bottom))
     (uuid 1f75c99c-761b-4cb3-b6d4-eb8041734823)
   )
-  (text "2x push buttons with pull-up. Negative logic: press = 0."
+  (text "3x push buttons with pull-up. Negative logic: press = 0."
     (at 19.05 25.4 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 48124060-56b0-4efa-96f5-f7595ecab293)
@@ -3248,15 +3248,16 @@
     (effects (font (size 2.54 2.54) (thickness 0.4) bold) (justify left bottom))
     (uuid 5df98ad4-d560-42e2-b14d-e9c5ce187043)
   )
-  (text "4x slide switches set GND / +2V5 level signals." (at 20.32 87.63 0)
+  (text "8x DIP switches set GND, switch \"off\" uses internal pull-ups for '1' state."
+    (at 20.32 87.63 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 6aef697b-e4f9-429c-98a3-449a9c1ccac7)
   )
-  (text "Input: Slide Switches" (at 20.32 85.09 0)
+  (text "Input: DIP Switches" (at 20.32 85.09 0)
     (effects (font (size 2.54 2.54) (thickness 0.4) bold) (justify left bottom))
     (uuid 6cb25d36-5b65-4aa9-a33a-d1fc46e6e868)
   )
-  (text "4x 3mm LED for digital output signals." (at 100.33 87.63 0)
+  (text "8x 0402 LED for digital output signals." (at 100.33 87.63 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 7b82ebac-cfd0-4c96-9bb3-bdf10a2a623c)
   )
