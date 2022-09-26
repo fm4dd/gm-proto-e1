@@ -78,5 +78,5 @@ The following code examples demonstrate the board input/output components for qu
 The gm-proto-e1 THT board has been designed with KiCad version 6.0.
 <img src=fabfiles-tht/images/20220914-gm-proto-e1-kicad.png width="640px">
 
-
-
+The gm-proto-e1 THT board mounted on the E1 board, running the "count" demo.
+<img src=fabfiles-tht/images/gm-proto-e1-mounted.jpg width="640px">
