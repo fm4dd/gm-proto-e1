@@ -27,9 +27,13 @@ RM = rm -rf
 synth: synth_vlog
 
 synth_vlog: $(VLOG_SRC)
+	@test -d log || mkdir log
+	@test -d net || mkdir net
 	$(YOSYS) -ql log/synth.log -p 'read -sv $^; synth_gatemate -top $(TOP) -vlog net/$(TOP)_synth.v'
 
 synth_vhdl: $(VHDL_SRC)
+	@test -d log || mkdir log
+	@test -d net || mkdir net
 	$(YOSYS) -ql log/synth.log -p 'ghdl --warn-no-binding -C --ieee=synopsys $^ -e $(TOP); synth_gatemate -top $(TOP) -vlog net/$(TOP)_synth.v'
 
 impl:
@@ -80,7 +84,6 @@ clean:
 	$(RM) *.path_struc
 	$(RM) *.net
 	$(RM) *.id
-	$(RM) *.idh
 	$(RM) *.prn
 	$(RM) *_00.v
 	$(RM) *.used
@@ -92,3 +95,6 @@ clean:
 	$(RM) sim/*.vcd
 	$(RM) sim/*.vvp
 	$(RM) sim/*.gtkw
+	test ! -d log || rmdir log
+	test ! -d net || rmdir net
+

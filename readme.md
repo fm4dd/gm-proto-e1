@@ -12,6 +12,9 @@ The gm-proto-e1 board is an application module board for the <a href="https://ww
 - 2x 7-Segment display modules
 - Buzzer (SMD only)
 
+This design is registered under the OSHWA Open Source Hardware Self-Certification:  
+<a href="https://certification.oshwa.org/jp000018.html"><img src="fabfiles-tht/images/oshw-reg-jp000018.svg" style="width:100px"></a>
+
 ### Hardware Versions
 
 The gm-proto-e1 application board has been designed as a 100x70mm double-layer PCB, with precision alignment of the six 46-pin 1.27mm pitch GPIO connectors, verified to fit the GateMate FPGA evaluation board E1 V3.1B. For THT components, great care needs to be taken to cut pins flush during soldering and prevent them from reaching components of the evaluation board below. The 1.27mm pitch GPIO connectors are offered with different distance spacers (2, 2.5 and 5mm), and the standard spacers achieve only 5mm total clearance.
@@ -84,3 +87,6 @@ The gm-proto-e1 THT board has been designed with KiCad version 6.0.
 
 The gm-proto-e1 THT board mounted on the E1 board, running the "count" demo.
 <img src=fabfiles-tht/images/gm-proto-e1-mounted.jpg width="640px">
+
+The gm-proto-e1 THT board hardware verification video.
+<a href="https://www.youtube.com/watch?v=vqzWkTL39pk"><img src=fabfiles-tht/images/gm-proto-e1-demo.png width="640px"></a>
