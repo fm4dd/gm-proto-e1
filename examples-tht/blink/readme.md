@@ -14,3 +14,7 @@ Load SRAM via JTAG: [==================================================] 100.00%
 Done
 Wait for CFG_DONE DONE
 ```
+
+GTKWave simulation:
+
+<img src=sim/blink-sim-gtkwave.png width="780px">

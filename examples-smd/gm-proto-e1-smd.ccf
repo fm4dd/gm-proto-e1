@@ -1,0 +1,81 @@
+## file: gm-proto-e1.ccf
+##
+## hardware pin constraints file for gm-proto-e1 SMD board
+## https://github.com/fm4dd/gm-proto-e1
+## #######################################################
+## E1 Evaluation board constraints: 1x cloxk signal SB_A8
+## 8x onboard led and one push button on GPIO bank EB
+## #######################################################
+Pin_in  "clk"       Loc = "IO_SB_A8" | SCHMITT_TRIGGER=true;
+Pin_in  "rst"       Loc = "IO_EB_B0";
+Pin_out "e1led[0]"  Loc = "IO_EB_B1";
+Pin_out "e1led[1]"  Loc = "IO_EB_B2";
+Pin_out "e1led[2]"  Loc = "IO_EB_B3";
+Pin_out "e1led[3]"  Loc = "IO_EB_B4";
+Pin_out "e1led[4]"  Loc = "IO_EB_B5";
+Pin_out "e1led[5]"  Loc = "IO_EB_B6";
+Pin_out "e1led[6]"  Loc = "IO_EB_B7";
+Pin_out "e1led[7]"  Loc = "IO_EB_B8";
+## #######################################################
+## E1 board PMOD-A connector constraints Digilent PMOD 8LD
+## #######################################################
+Pin_out "pmaled[0]" Loc = "IO_NB_A0"| DRIVE=3;
+Pin_out "pmaled[1]" Loc = "IO_NB_A1"| DRIVE=3;
+Pin_out "pmaled[2]" Loc = "IO_NB_A2"| DRIVE=3;
+Pin_out "pmaled[3]" Loc = "IO_NB_A3"| DRIVE=3;
+Pin_out "pmaled[4]" Loc = "IO_NB_B0"| DRIVE=3;
+Pin_out "pmaled[5]" Loc = "IO_NB_B1"| DRIVE=3;
+Pin_out "pmaled[6]" Loc = "IO_NB_B2"| DRIVE=3;
+Pin_out "pmaled[7]" Loc = "IO_NB_B3"| DRIVE=3;
+## #######################################################
+## gm-proto-e1 board constraints for 8x LED
+## #######################################################
+Pin_out "prled[0]"  Loc = "IO_NA_A8"| DRIVE=3;
+Pin_out "prled[1]"  Loc = "IO_NA_A7"| DRIVE=3;
+Pin_out "prled[2]"  Loc = "IO_NA_A6"| DRIVE=3;
+Pin_out "prled[3]"  Loc = "IO_NA_A5"| DRIVE=3;
+Pin_out "prled[4]"  Loc = "IO_NA_A4"| DRIVE=3;
+Pin_out "prled[5]"  Loc = "IO_NA_A3"| DRIVE=3;
+Pin_out "prled[6]"  Loc = "IO_NA_A2"| DRIVE=3;
+Pin_out "prled[7]"  Loc = "IO_NA_A1"| DRIVE=3;
+## #######################################################
+## gm-proto-e1 board constraints for 2x 7-Segment Digits
+## prhex bits: 0=dp, 1=a, 2=b, 3=c, 4=d, 5=e, 6=f, 7=g
+## #######################################################
+Pin_out "prhex0[0]" Loc = "IO_WC_B1"| DRIVE=3;
+Pin_out "prhex0[1]" Loc = "IO_WC_B2"| DRIVE=3;
+Pin_out "prhex0[2]" Loc = "IO_WC_B3"| DRIVE=3;
+Pin_out "prhex0[3]" Loc = "IO_WC_B4"| DRIVE=3;
+Pin_out "prhex0[4]" Loc = "IO_WC_B5"| DRIVE=3;
+Pin_out "prhex0[5]" Loc = "IO_WC_B6"| DRIVE=3;
+Pin_out "prhex0[6]" Loc = "IO_WC_B7"| DRIVE=3;
+Pin_out "prhex0[7]" Loc = "IO_WC_B8"| DRIVE=3;
+Pin_out "prhex1[0]" Loc = "IO_WC_A8"| DRIVE=3;
+Pin_out "prhex1[1]" Loc = "IO_WC_A7"| DRIVE=3;
+Pin_out "prhex1[2]" Loc = "IO_WC_A6"| DRIVE=3;
+Pin_out "prhex1[3]" Loc = "IO_WC_A5"| DRIVE=3;
+Pin_out "prhex1[4]" Loc = "IO_WC_A4"| DRIVE=3;
+Pin_out "prhex1[5]" Loc = "IO_WC_A3"| DRIVE=3;
+Pin_out "prhex1[6]" Loc = "IO_WC_A2"| DRIVE=3;
+Pin_out "prhex1[7]" Loc = "IO_WC_A1"| DRIVE=3;
+## #######################################################
+## gm-proto-e1 board constraints 8x DIP Switches
+## #######################################################
+Pin_in  "prswi[0]"  Loc = "IO_SA_A1";
+Pin_in  "prswi[1]"  Loc = "IO_SA_A2";
+Pin_in  "prswi[2]"  Loc = "IO_SA_A3";
+Pin_in  "prswi[3]"  Loc = "IO_SA_A4";
+Pin_in  "prswi[4]"  Loc = "IO_SA_A5";
+Pin_in  "prswi[5]"  Loc = "IO_SA_A6";
+Pin_in  "prswi[6]"  Loc = "IO_SA_A7";
+Pin_in  "prswi[7]"  Loc = "IO_SA_A8";
+## #######################################################
+## gm-proto-e1 board constraints 2x Push Buttons
+## #######################################################
+Pin_in  "prbtn[0]"  Loc = "IO_SA_A0" | SCHMITT_TRIGGER=true;
+Pin_in  "prbtn[1]"  Loc = "IO_SA_B0" | SCHMITT_TRIGGER=true;
+Pin_in  "prbtn[2]"  Loc = "IO_SA_B1" | SCHMITT_TRIGGER=true;
+## #######################################################
+## gm-proto-e1 board constraints Proto Area definitions
+## #######################################################
+Pin_out "prbuz"     Loc = "IO_WC_A0" | DRIVE=3;
