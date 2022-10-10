@@ -66,15 +66,16 @@ The following code examples demonstrate the board input/output components for qu
 | Verilog  |[count](examples-tht/count)   | binary counter displayed on four LED and two 7-Segment digits     |
 | Verilog  |[button](examples-tht/button) | push button press changes LED frequency and light move direction  |
 | Verilog  |[switch](examples-tht/switch) | each slide switch turns its corresponding LED on or off           |
+| Verilog  |[display](examples-tht/display)| basic control of a HD44780-compatible 3.3V character LCD display  |
 
 #### Surface-Mount Design:
 
-| Language | Folder                       | Description                                                       |
-|----------|------------------------------|-------------------------------------------------------------------|
-| Verilog  |[blink](examples-tht/blink)   | blinks four LED's in a alternating pattern                        |
-| Verilog  |[count](examples-tht/count)   | binary counter displayed on eight LED and two 7-Segment digits    |
-| Verilog  |[button](examples-tht/button) | push button press changes LED frequency and light move direction  |
-| Verilog  |[switch](examples-tht/switch) | each slide switch turns its corresponding LED on or off           |
+| Language | Folder                        | Description                                                       |
+|----------|-------------------------------|-------------------------------------------------------------------|
+| Verilog  |[blink](examples-smd/blink)    | blinks four LED's in a alternating pattern                        |
+| Verilog  |[count](examples-smd/count)    | binary counter displayed on eight LED and two 7-Segment digits    |
+| Verilog  |[button](examples-smd/button)  | push button press changes LED frequency and light move direction  |
+| Verilog  |[switch](examples-smd/switch)  | each slide switch turns its corresponding LED on or off           |
 
 ### Board Pictures
 
@@ -90,3 +91,6 @@ The gm-proto-e1 THT board mounted on the E1 board, running the "count" demo.
 
 The gm-proto-e1 THT board hardware verification video.
 <a href="https://www.youtube.com/watch?v=vqzWkTL39pk"><img src=fabfiles-tht/images/gm-proto-e1-demo.png width="640px"></a>
+
+The gm-proto-e1 THT board, running the "display" demo
+<img src=examples-tht/display/charlcd-demo.png width="640px">
