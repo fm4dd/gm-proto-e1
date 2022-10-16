@@ -19,8 +19,8 @@ module blink(
   reg clk_1hz;
   reg [22:0] count;
 
-  assign {prled[0], prled[2], prled[4], prled[6]} = clk_1hz;
-  assign {prled[1], prled[3], prled[5], prled[7]} = ~clk_1hz;
+  assign {prled[0], prled[2], prled[4], prled[6]} = {4{clk_1hz}};
+  assign {prled[1], prled[3], prled[5], prled[7]} = {4{~clk_1hz}};
 
   always @(posedge clk or negedge rst)
   begin
