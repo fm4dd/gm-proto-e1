@@ -29,7 +29,7 @@ synth: synth_vlog
 synth_vlog: $(VLOG_SRC)
 	@test -d log || mkdir log
 	@test -d net || mkdir net
-	$(YOSYS) -ql log/synth.log -p 'read -sv $^; synth_gatemate -top $(TOP) -vlog net/$(TOP)_synth.v'
+	$(YOSYS) -ql log/synth.log -p 'read -sv $^; synth_gatemate -top $(TOP) -nomx8 -vlog net/$(TOP)_synth.v'
 
 synth_vhdl: $(VHDL_SRC)
 	@test -d log || mkdir log
