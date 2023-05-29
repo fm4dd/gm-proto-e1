@@ -19,14 +19,14 @@ Pin_out "e1led[7]"  Loc = "IO_EB_B8";
 ## #######################################################
 ## E1 board PMOD-A connector constraints Digilent PMOD 8LD
 ## #######################################################
-Pin_out "pmaled[0]" Loc = "IO_NB_A0"| DRIVE=3; # Pin-1
-Pin_out "pmaled[1]" Loc = "IO_NB_A1"| DRIVE=3; # Pin-2
-Pin_out "pmaled[2]" Loc = "IO_NB_A2"| DRIVE=3; # Pin-3
-Pin_out "pmaled[3]" Loc = "IO_NB_A3"| DRIVE=3; # Pin-4
-Pin_out "pmaled[4]" Loc = "IO_NB_B0"| DRIVE=3; # Pin-7
-Pin_out "pmaled[5]" Loc = "IO_NB_B1"| DRIVE=3; # Pin-8
-Pin_out "pmaled[6]" Loc = "IO_NB_B2"| DRIVE=3; # Pin-9
-Pin_out "pmaled[7]" Loc = "IO_NB_B3"| DRIVE=3; # Pin-10
+Pin_out "pmaled[0]" Loc = "IO_NB_A0"| DRIVE=3;
+Pin_out "pmaled[1]" Loc = "IO_NB_A1"| DRIVE=3;
+Pin_out "pmaled[2]" Loc = "IO_NB_A2"| DRIVE=3;
+Pin_out "pmaled[3]" Loc = "IO_NB_A3"| DRIVE=3;
+Pin_out "pmaled[4]" Loc = "IO_NB_B0"| DRIVE=3;
+Pin_out "pmaled[5]" Loc = "IO_NB_B1"| DRIVE=3;
+Pin_out "pmaled[6]" Loc = "IO_NB_B2"| DRIVE=3;
+Pin_out "pmaled[7]" Loc = "IO_NB_B3"| DRIVE=3;
 ## #######################################################
 ## gm-proto-e1 board constraints for 4x LED
 ## #######################################################
@@ -68,5 +68,28 @@ Pin_in  "prbtn[0]"  Loc = "IO_SA_A1" | SCHMITT_TRIGGER=true;
 Pin_in  "prbtn[1]"  Loc = "IO_SA_A0" | SCHMITT_TRIGGER=true;
 ## #######################################################
 ## gm-proto-e1 board constraints Proto Area definitions
+## HD44780 character LCD 11 pins on bank EB and EA_A7,A8
 ## #######################################################
-Pin_out "prbuz"     Loc = "IO_EA_A6";
+Pin_out "lcd_rs"     Loc = "IO_EA_A7";
+Pin_out "lcd_rw"     Loc = "IO_EA_A8";
+Pin_out "lcd_en"     Loc = "IO_EB_A0";
+Pin_out "lcd_db[0]"  Loc = "IO_EB_A1";
+Pin_out "lcd_db[1]"  Loc = "IO_EB_A2";
+Pin_out "lcd_db[2]"  Loc = "IO_EB_A3";
+Pin_out "lcd_db[3]"  Loc = "IO_EB_A4";
+Pin_out "lcd_db[4]"  Loc = "IO_EB_A5";
+Pin_out "lcd_db[5]"  Loc = "IO_EB_A6";
+Pin_out "lcd_db[6]"  Loc = "IO_EB_A7";
+Pin_out "lcd_db[7]"  Loc = "IO_EB_A8";
+## #######################################################
+## gm-proto-e1 proto area buzzer and audio connection
+## #######################################################
+Pin_out "prbuz"      Loc = "IO_EA_A6";
+Pin_out "audio_r"    Loc = "IO_SB_A7";
+## #######################################################
+## gm-proto-e1 proto area 16-pos rotary encoder connection
+## #######################################################
+Pin_in "prrot[0]"    Loc = "IO_SB_B0" | PULLDOWN=true;
+Pin_in "prrot[1]"    Loc = "IO_SB_B1" | PULLDOWN=true;
+Pin_in "prrot[2]"    Loc = "IO_SB_B2" | PULLDOWN=true;
+Pin_in "prrot[3]"    Loc = "IO_SB_B3" | PULLDOWN=true;

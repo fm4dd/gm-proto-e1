@@ -67,6 +67,7 @@ The following code examples demonstrate the board input/output components for qu
 | Verilog  |[button](examples-tht/button) | push button press changes LED frequency and light move direction  |
 | Verilog  |[switch](examples-tht/switch) | each slide switch turns its corresponding LED on or off           |
 | Verilog  |[display](examples-tht/display)| basic control of a HD44780-compatible 3.3V character LCD display  |
+| Verilog  |[rotenc16](examples-tht/rotenc16)| basic control of a 16-position rotary encoder input switch  |
 
 #### Surface-Mount Design:
 

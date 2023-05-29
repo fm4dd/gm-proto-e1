@@ -126,13 +126,11 @@ always @(negedge lcd_en)         // on falling edge of en, send commands or data
 begin
   lcd_rs=memory[pointer][9];     // First two bits (MSB bits) have rs and rw signal data
   lcd_rw=1'b0;                   // We only write to the LCD, therefore set rw = '0'.
-  if (!lsbflag)  
-  begin
+  if (!lsbflag) begin
     lcd_db=memory[pointer][7:4]; // First send the upper 4 bits data/command
     lsbflag=1'b1;                // msb nibble complete, set lsbflag = 1
   end
-  else
-  begin
+  else begin
     lcd_db=memory[pointer][3:0]; // Next send the lower 4 bits data/command
     pointer=pointer+1;           // increment memory pointer
     lsbflag=1'b0;                // lsb nibble complete, reset lsbflag = 0

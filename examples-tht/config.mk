@@ -7,7 +7,8 @@ YOSYS = /home/fm/cc-toolchain-linux/bin/yosys/yosys$(EXE)
 PR    = /home/fm/cc-toolchain-linux/bin/p_r/p_r$(EXE)
 OFL   = /usr/local/bin/openFPGALoader$(EXE)
 
-GTKW = gtkwave
+## latest GTKwave v3.4.0 is here:
+GTKW = /usr/share/gtkwave/gtkwave3-gtk3/src/gtkwave
 IVL = iverilog
 VVP = vvp
 IVLFLAGS = -Winfloop -g2012 -gspecify -Ttyp
@@ -51,6 +52,16 @@ spi:
 spi-flash:
 	$(OFL) $(OFLFLAGS) -b gatemate_evb_spi -f --verify $(TOP)_00.cfg
 
+# /usr/bin/iverilog -o sim/pmod_charlcd.tb -s pmod_charlcd_tb sim/*.v src/*.v
+test:
+	@echo 'Creating testbench file'
+	test ! -e sim/$(TOP).tb || rm sim/$(TOP).tb
+	test ! -e $(TOP).vcd || rm $(TOP).vcd
+	$(IVL) -o sim/$(TOP).tb -s $(TOP)_tb $(VLOG_SRC) sim/$(TOP)_tb.v
+	@echo 'Running testbench simulation'
+	$(VVP) sim/$(TOP).tb
+	$(GTKW) $(TOP).vcd sim/config.gtkw
+
 all: synth impl jtag
 
 ## verilog simulation targets
@@ -69,7 +80,7 @@ impl_sim.vvp:
 	@$(RM) sim/$^
 
 wave:
-	$(GTKW) sim/$(TOP)_tb.vcd sim/config.gtkw
+	$(GTKW) $(TOP).vcd sim/config.gtkw
 
 clean:
 	$(RM) log/*.log
